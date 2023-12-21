@@ -7,6 +7,8 @@ RUN pip3 install --no-cache-dir --upgrade -r requirements.txt
 
 COPY . .
 
+RUN python3 manage.py migrate
+
 ENV MY_ENV=netology
 EXPOSE 8000
 
